@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjgoodwill.dao.base.TStudentBaseMapper">
+
+
+    <insert id="insertTStudent"  useGeneratedKeys="true" keyProperty="StudnetID">
+        INSERT INTO `t_student`
+        (
+        <trim suffixOverrides=",">
+                    <if test="StudnetID!=null">
+                        `StudnetID`,
+                    </if>
+                    <if test="Name!=null">
+                        `Name`,
+                    </if>
+                    <if test="Age!=null">
+                        `Age`,
+                    </if>
+        </trim>
+        )
+        VALUES
+        (
+        <trim suffixOverrides=",">
+                <if test="StudnetID!=null">
+                    #{StudnetID},
+                </if>
+                <if test="Name!=null">
+                    #{Name},
+                </if>
+                <if test="Age!=null">
+                    #{Age},
+                </if>
+        </trim>
+        )
+    </insert>
+
+
+
+
+    <update id="updateTStudent">
+        UPDATE `t_student`
+        SET
+        <trim suffixOverrides=",">
+            <if test="Name != null and Name!=''">
+                `Name` = #{Name},
+            </if>
+            <if test="Age != null">
+                `Age` = #{Age},
+            </if>
+        </trim>
+        WHERE
+        <trim suffixOverrides="and">
+                `StudnetID` = #{StudnetID} and
+        </trim>
+    </update>
+
+
+
+    <resultMap type="com.bjgoodwill.entity.TStudent" id="TStudentMap">
+        <result property="StudnetID" column="StudnetID"/>
+        <result property="Name" column="Name"/>
+        <result property="Age" column="Age"/>
+    </resultMap>
+
+
+    <select id="queryTStudent" resultMap="TStudentMap">
+        select
+        <include refid="baseResult"></include>
+        from  `t_student`
+        <trim prefix="where" suffixOverrides="and | or">
+            <if test="StudnetID != null">
+                `StudnetID` = #{StudnetID} and
+            </if>
+            <if test="Name != null and Name!=''">
+                `Name` = #{Name} and
+            </if>
+            <if test="Age != null">
+                `Age` = #{Age} and
+            </if>
+            <if test = "(_parameter instanceof com.bjgoodwill.entity.TStudent$QueryBuilder) == true">
+                <if test="StudnetIDList != null">
+                    `StudnetID` in
+                    <foreach collection="StudnetIDList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="StudnetIDSt !=null">
+                    `StudnetID` >= #{StudnetIDSt} and
+                </if>
+                <if test="StudnetIDEd!=null">
+                    `StudnetID` &lt;= #{StudnetIDEd} and
+                </if>
+                <if test="NameList != null">
+                    `Name` in
+                    <foreach collection="NameList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test ="fuzzyName!=null and fuzzyName.size()>0">
+                    (
+                    <foreach collection="fuzzyName"  separator="or" item="item">
+                        `Name` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyName!=null and rightFuzzyName.size()>0">
+                    (
+                    <foreach collection="rightFuzzyName"  separator="or" item="item">
+                        `Name` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test="AgeList != null">
+                    `Age` in
+                    <foreach collection="AgeList" close=")" open="(" separator="," item="item">
+                        #{item}
+                    </foreach> and
+                </if>
+                <if test="AgeSt !=null">
+                    `Age` >= #{AgeSt} and
+                </if>
+                <if test="AgeEd!=null">
+                    `Age` &lt;= #{AgeEd} and
+                </if>
+            </if>
+        </trim>
+    </select>
+
+    <select id="queryTStudentLimit1" resultMap="TStudentMap">
+        select
+        <include refid="baseResult"></include>
+        from  `t_student`
+        <trim prefix="where" suffixOverrides="and | or">
+            <if test="StudnetID != null">
+                `StudnetID` = #{StudnetID} and
+            </if>
+            <if test="Name != null and Name!=''">
+                `Name` = #{Name} and
+            </if>
+            <if test="Age != null">
+                `Age` = #{Age} and
+            </if>
+            <if test = "(_parameter instanceof com.bjgoodwill.entity.TStudent$QueryBuilder) == true">
+                    <if test="StudnetIDList != null">
+                        `StudnetID` in
+                        <foreach collection="StudnetIDList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="StudnetIDSt !=null">
+                    `StudnetID` >= #{StudnetIDSt} and
+                </if>
+                <if test="StudnetIDEd!=null">
+                    `StudnetID` &lt;= #{StudnetIDEd} and
+                </if>
+                    <if test="NameList != null">
+                        `Name` in
+                        <foreach collection="NameList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test ="fuzzyName!=null and fuzzyName.size()>0">
+                    (
+                    <foreach collection="fuzzyName"  separator="or" item="item">
+                        `Name` like concat('%',#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                <if test ="rightFuzzyName!=null and rightFuzzyName.size()>0">
+                    (
+                    <foreach collection="rightFuzzyName"  separator="or" item="item">
+                        `Name` like concat(#{item},'%')
+                    </foreach>
+                    ) and
+                </if>
+                    <if test="AgeList != null">
+                        `Age` in
+                        <foreach collection="AgeList" close=")" open="(" separator="," item="item">
+                            #{item}
+                        </foreach> and
+                    </if>
+                <if test="AgeSt !=null">
+                    `Age` >= #{AgeSt} and
+                </if>
+                <if test="AgeEd!=null">
+                    `Age` &lt;= #{AgeEd} and
+                </if>
+            </if>
+        </trim>
+        limit 1
+    </select>
+
+    <sql id="allResult">
+        <trim suffixOverrides=",">
+        `StudnetID`,
+        `Name`,
+        `Age`,
+        </trim>
+    </sql>
+
+
+
+    <sql id="baseResult">
+        <trim suffixOverrides=",">
+            <if test = "(_parameter instanceof com.bjgoodwill.entity.TStudent$QueryBuilder) == true">
+
+                <if test="fetchFields==null">
+                    <include refid="allResult"></include>
+                </if>
+                <if test="fetchFields!=null">
+                    <if test="fetchFields.AllFields !=null">
+                        <include refid="allResult"></include>
+                    </if>
+                    <if test="fetchFields.AllFields ==null and fetchFields.fetchFields==null and fetchFields.excludeFields==null and fetchFields.otherFields==null">
+                        <include refid="allResult"></include>
+                    </if>
+                    <if test="fetchFields.AllFields==null and fetchFields.fetchFields!=null">
+                    <if test="fetchFields.fetchFields.StudnetID==true">
+                        `StudnetID`,
+                    </if>
+                    <if test="fetchFields.fetchFields.Name==true">
+                        `Name`,
+                    </if>
+                    <if test="fetchFields.fetchFields.Age==true">
+                        `Age`,
+                    </if>
+                    </if>
+                    <if test="fetchFields.AllFields==null and fetchFields.excludeFields!=null">
+                    <if test="fetchFields.excludeFields.StudnetID==null">
+                        `StudnetID`,
+                    </if>
+                    <if test="fetchFields.excludeFields.Name==null">
+                        `Name`,
+                    </if>
+                    <if test="fetchFields.excludeFields.Age==null">
+                        `Age`,
+                    </if>
+                    </if>
+                    <if test="fetchFields.otherFields!=null and fetchFields.otherFields.size>0">
+                        <foreach collection="fetchFields.otherFields" index="index" item="item" separator=",">
+                        `#{item}`
+                        </foreach>
+                    </if>
+                </if>
+            </if>
+            <if test="(_parameter instanceof com.bjgoodwill.entity.TStudent$QueryBuilder) == false" >
+                <include refid="allResult"></include>
+            </if>
+
+        </trim>
+    </sql>
+
+
+</mapper>
