@@ -1,4 +1,4 @@
-package com.bjgoodwill.controller;
+package com.bjgoodwill.common;
 
 import com.bjgoodwill.common.ExecuteResult;
 import com.bjgoodwill.common.DataResult;
@@ -23,5 +23,9 @@ public class BaseController {
         dataResult.setTotal(total);
         dataResult.setMessage(message);
         return dataResult;
+    }
+
+    protected  String ToJson(ExecuteResult executeResult){
+        return com.alibaba.fastjson.JSON.toJSONString(executeResult,false);
     }
 }

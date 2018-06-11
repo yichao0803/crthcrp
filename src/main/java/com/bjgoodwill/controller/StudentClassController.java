@@ -1,10 +1,10 @@
 package com.bjgoodwill.controller;
 
+import com.bjgoodwill.common.BaseController;
 import com.bjgoodwill.entity.StudentClass;
 import com.bjgoodwill.entity.StudentClassExample;
 import com.bjgoodwill.service.IStudentClassService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,8 +13,9 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/api/StudentClass",produces = "application/json;charset=UTF-8")
-public class StudentClassController extends  BaseController {
+@RequestMapping(value="/api/StudentClass")
+//@RequestMapping(value="/api/StudentClass")
+public class StudentClassController extends BaseController {
 
     @Autowired
     private IStudentClassService service;
@@ -26,16 +27,15 @@ public class StudentClassController extends  BaseController {
 
         return jsonResult;
     }
-    @GetMapping(value="Page")
+    @GetMapping(value="Page",produces = "application/json;charset=utf-8")
     public  String Page(){
         StudentClassExample example=new StudentClassExample();
 
-        example.setLimit(10); // page size limit
+        example.setLimit(9); // page size limit
         example.setOffset(0); // offset
-        example.or().andClassidGreaterThanOrEqualTo(3);
+        example.or().andClassidGreaterThanOrEqualTo(0);
         List<StudentClass> list = service.selectByExample(example);
-        String jsonResult=com.alibaba.fastjson.JSON.toJSONString(this.FromObject(list,list.size(),0,""));
-        return  jsonResult;
+        return  this.ToJson(this.FromObject(list,list.size(),0,""));
     }
 
     @GetMapping(value="login")

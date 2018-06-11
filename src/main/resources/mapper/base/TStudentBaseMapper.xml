@@ -199,8 +199,6 @@
         </trim>
     </sql>
 
-
-
     <sql id="baseResult">
         <trim suffixOverrides=",">
             <if test = "(_parameter instanceof com.bjgoodwill.entity.TStudent$QueryBuilder) == true">
@@ -250,6 +248,5 @@
 
         </trim>
     </sql>
-
 
 </mapper>

@@ -15,5 +15,4 @@ public interface TStudentBaseMapper {
     List<TStudent> queryTStudent(TStudent object);
 
     TStudent queryTStudentLimit1(TStudent object);
-
 }
