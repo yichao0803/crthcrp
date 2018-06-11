@@ -4,6 +4,7 @@
 <configuration>
     <settings>
         <setting name="callSettersOnNulls" value="true"/>
+        <!--<setting name="logImpl" value="LOG4J"/>-->
     </settings>
     <!-- 实体类,简称 -设置别名 -->
     <!--<typeAliases>-->
