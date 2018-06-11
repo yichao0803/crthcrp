@@ -1,1 +1,15 @@
-JDK8+Tomcat8.5+Maven3.5.3+Spring-WebMVC4.3.1+mybatis3.3.0
+JDK8+Tomcat8.5+Maven3.5.3+Spring-WebMVC4.3.1+mybatis3.3.0整合框架
+
+#未解决问题
+跨域访问，不同的主机访问后端问题
+前段模拟开发问题
+
+#已解决问题
+生成代码工具
+	基本操作CRUD（使用mybatis-generator-maven-plugin）
+	MySQL分页（使用插件mybatis-generator-limit-plugin-mvn-repo）
+权限登录（Session）
+前后端接口协议问题
+Mybits直接执行SQL语句
+MybitsSQL日志(log4j,slf4j-log4j12)
+SpringMVC中文乱码问题
