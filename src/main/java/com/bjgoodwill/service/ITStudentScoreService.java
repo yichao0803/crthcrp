@@ -14,8 +14,6 @@ public interface ITStudentScoreService {
 
     TStudentScore selectByPrimaryKey(Integer id);
 
-    // List<StudentClass> selectByCondition(StudentClass record);
-
     int updateByPrimaryKeySelective(TStudentScore record);
 
     int updateByPrimaryKey(TStudentScore record);

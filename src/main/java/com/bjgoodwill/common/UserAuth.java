@@ -1,7 +1,5 @@
 package com.bjgoodwill.common;
 
-import com.bjgoodwill.common.ExecuteResult;
-import com.bjgoodwill.common.BaseController;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
