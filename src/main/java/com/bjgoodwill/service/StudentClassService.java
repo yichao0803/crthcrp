@@ -2,6 +2,7 @@ package com.bjgoodwill.service;
 
 import com.bjgoodwill.dao.StudentClassMapper;
 import com.bjgoodwill.entity.StudentClass;
+import com.bjgoodwill.entity.StudentClassExample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,5 +47,10 @@ public class StudentClassService implements IStudentClassService {
     @Override
     public int updateByPrimaryKey(StudentClass record) {
         return studentClassMapper.updateByPrimaryKey(record);
+    }
+
+    @Override
+    public List<StudentClass> selectByExample(StudentClassExample example) {
+       return studentClassMapper.selectByExample(example);
     }
 }

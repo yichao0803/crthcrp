@@ -5,6 +5,8 @@
     <classPathEntry
             location="D:\maven\LocalWarehouse\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar"/>
     <context id="testTables" targetRuntime="MyBatis3">
+        <!--<plugin type="org.mybatis.generator.plugins.RowBoundsPlugin"></plugin>-->
+        <plugin type="com.xxg.mybatis.plugins.MySQLLimitPlugin"></plugin>
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
             <property name="suppressAllComments" value="true"/>
@@ -35,11 +37,16 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <table tableName="studentclass" domainObjectName="StudentClass"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
+               enableCountByExample="true" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="true"
                selectByExampleQueryId="false">
-
         </table>
+        <!--<table tableName="studentclass" domainObjectName="StudentClass"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false">-->
+
+        <!--</table>-->
         <!-- 有些表的字段需要指定java类型
         <table schema="" tableName="">
             <columnOverride column="" javaType="" />

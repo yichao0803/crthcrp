@@ -1,6 +1,7 @@
 package com.bjgoodwill.service;
 
 import com.bjgoodwill.entity.StudentClass;
+import com.bjgoodwill.entity.StudentClassExample;
 import java.util.List;
 
 public interface IStudentClassService {
@@ -17,4 +18,6 @@ public interface IStudentClassService {
     int updateByPrimaryKeySelective(StudentClass record);
 
     int updateByPrimaryKey(StudentClass record);
+
+    List<StudentClass> selectByExample(StudentClassExample example);
 }
