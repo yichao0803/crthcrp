@@ -5,6 +5,7 @@ import com.bjgoodwill.entity.TStudent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 
 @Service
@@ -30,6 +31,11 @@ public class TStudentService  implements ITStudentService {
     @Override
     public TStudent queryTStudentLimit1(TStudent object) {
         return  tStudentMapper.queryTStudentLimit1(object);
+    }
+
+    @Override
+    public List<LinkedHashMap<String, Object>> superManagerSelect(String sql){
+        return  tStudentMapper.superManagerSelect(sql);
     }
 }
 

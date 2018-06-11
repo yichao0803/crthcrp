@@ -35,6 +35,9 @@
             <!-- 先匹配所有路径，然后排除不需要检查的路径 -->
             <mvc:mapping path="/**"/>
             <mvc:exclude-mapping path="/api/Student*"/>
+            <mvc:exclude-mapping path="/api/TStudent*"/>
+            <mvc:exclude-mapping path="/api/TStudent/*"/>
+            <mvc:exclude-mapping path="/api/TStudentScore*"/>
             <mvc:exclude-mapping path="/api/StudentClass/*"/>
             <!-- 与登录相关的请求 -->
             <!--<mvc:exclude-mapping path="/*.jsp"/>-->
