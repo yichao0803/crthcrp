@@ -6,37 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f0b779b-1e46-425f-b7e7-fc16cef1f550" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crthcrp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/crthcrp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/common/UserAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/common/UserAuth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/StudentClassController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/StudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/TStudentController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/TStudentScoreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/TStudentScoreController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/dao/StudentClassMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/dao/StudentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/dao/TStudentMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/dao/base/TStudentBaseMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/entity/Student.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/entity/StudentClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/entity/StudentClassExample.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/entity/TStudent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/IStudentClassService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/IStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/ITStudentScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/ITStudentScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/ITStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/StudentClassService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/StudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/bjgoodwill/service/TStudentService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentClassMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/StudentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TStudentMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/base/TStudentBaseMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring-mybatis.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5f0b779b-1e46-425f-b7e7-fc16cef1f550" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,11 +24,8 @@
       <file leaf-file-name="TStudentScoreController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/TStudentScoreController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="152">
+              <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -104,7 +71,6 @@
       <find>LOG4J</find>
       <find>context-param</find>
       <find>com.bjgoodwill.entity.Student</find>
-      <find>Student</find>
       <find>Student</find>
     </findStrings>
     <dirStrings>
@@ -537,16 +503,15 @@
       <workItem from="1528365940048" duration="490000" />
       <workItem from="1528435725432" duration="10628000" />
       <workItem from="1528681238251" duration="24204000" />
-      <workItem from="1528719310168" duration="2200000" />
+      <workItem from="1528719310168" duration="2489000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90533000" />
+    <option name="totallyTimeSpent" value="90822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.19838946" side_tool="true" weight="0.52681386" />
@@ -978,11 +943,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bjgoodwill/controller/TStudentScoreController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="51" column="4" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="8" column="49" lean-forward="true" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
         </state>
       </provider>
     </entry>
