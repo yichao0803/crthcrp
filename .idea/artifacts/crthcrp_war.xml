@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="crthcrp:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="crthcrp.war">
-      <element id="artifact" artifact-name="crthcrp:war exploded" />
-    </root>
-  </artifact>
-</component>
